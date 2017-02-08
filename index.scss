@@ -1,0 +1,58 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+$fontsize: 12px;
+$mright: 20%;
+$mleft: 15%;
+$docolor: #00FF00;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  font-size: $fontsize;
+}
+@mixin submit($width) {
+  height: 50px;
+  background-color: red;
+  width: $width;
+}
+
+.submit { @include submit(100px); }
+.nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: inline-block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+
+}
+.nav{
+background-color: grey;
+height: 100px;
+width: auto;
+}
+.left{
+	float: left;
+}
+#container{
+margin-right: $mright;
+margin-left: $mleft;
+background-color: #FFFFFF;
+height: 1200px;
+}
+#doc{
+	@extend .nav;
+background-color: $docolor;
+height: 1200px;
+}
+.lists{
+	float: right;
+	margin-top: 5px;
+}
